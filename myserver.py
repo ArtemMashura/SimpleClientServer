@@ -2,11 +2,9 @@ import socket
 
 myIP = 'localhost'
 myPort = 12345
-print('SERVER START')
 
 listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 listener.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-print('SERVER CONFIG')
 
 listener.bind((myIP, myPort))
 listener.listen(0)
